@@ -6,7 +6,7 @@ ENV LANG='en_US.UTF-8'
 RUN echo "http://mirrors.tuna.tsinghua.edu.cn/alpine/v3.8/main" > /etc/apk/repositories \
       && echo "http://mirrors.tuna.tsinghua.edu.cn/alpine/v3.8/community" >> /etc/apk/repositories \
       && apk update \
-      && apk add perl perl-lwp-useragent-determined perl-xml-simple perl-html-tree perl-spreadsheet-parseexcel perl-json \
+      && apk add perl perl-lwp-useragent-determined perl-xml-simple perl-html-tree perl-spreadsheet-parseexcel perl-json perl-lwp-protocol-https \
       && mkdir -p /workspace
 WORKDIR /workspace
 CMD /bin/sh
